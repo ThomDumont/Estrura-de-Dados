@@ -22,7 +22,7 @@ class Fila{
 			return true;	
 		
 		}
-
+		
 		bool desenfileira(int* desenfileirado=NULL){
 			if(i==f)
 				return false;
@@ -34,7 +34,14 @@ class Fila{
 			return true;
 		}
 
+		void imprime(){
+			for(int k = i; k % n != f ; k = (k+1 )% n){
+				cout << v[k] << endl;
 
+			}
+			cout << "---------" << endl;
+		}
+	
 };
 
 
@@ -45,7 +52,9 @@ int main() {
 	f.enfileira(3);
 	f.enfileira(48);
 	f.enfileira(102);
-	//f.desenfileira();
+	f.imprime();
+	f.desenfileira();
+	
 	int temp;
 	while(f.desenfileira(&temp)){
 		cout << temp << endl;
